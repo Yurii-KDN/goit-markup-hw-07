@@ -69,6 +69,11 @@ body {
   color: var(--color-slate);
   background-color: var(--color-white);
 }
+
+img {
+  display: block;
+}
+
 /* Header styles*/
 .header {
   border-bottom: 1px solid;
@@ -523,7 +528,9 @@ body {
     flex-wrap: nowrap;
   }
 }
-
+/* .features-item {
+  border: none;
+} */
 /* Tablet styles & > */
 @media only screen and (min-width: 768px) {
   .features-item {
@@ -598,6 +605,13 @@ body {
 }
 
 /* Work section styles*/
+
+@media only screen and (max-width: 1157px) {
+  .section-work {
+    display: none;
+  }
+}
+/* Desktop styles & > */
 .section-work {
   padding-bottom: 120px;
 }
