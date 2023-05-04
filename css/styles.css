@@ -20,9 +20,13 @@
 }
 /* General styles */
 
-img {
-  display: block;
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
 }
+
 .link {
   text-decoration: none;
 }
@@ -43,13 +47,6 @@ img {
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-}
-
-.container {
-  width: 1158px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0 auto;
 }
 
 /* Body styles*/
