@@ -502,8 +502,8 @@ img {
   /* Phone styles & > */
   padding: 96px 0;
 }
-/* Tablet styles & > */
-@media only screen and (min-width: 768px) {
+/* Desktop styles & > */
+@media only screen and (min-width: 1158px) {
   .section-features {
     padding: 120px 0;
   }
@@ -739,10 +739,14 @@ img {
   }
 }
 .customers-list {
+  /* Phone styles & > */
   display: flex;
   align-items: center;
   gap: 24px;
 }
+/* Tablet styles & > */
+
+/* Desktop styles & > */
 
 .customers-item {
   width: calc((100%-120px) / 6);
