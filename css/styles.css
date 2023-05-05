@@ -51,7 +51,7 @@
   padding: 0;
   margin: 0;
 }
-/* .section-title {
+.section-title {
   margin-top: 0;
   margin-right: auto;
   margin-bottom: 72px;
@@ -59,11 +59,11 @@
 
   color: var(--color-navy-blue);
   font-size: 36px;
-  line-height: 1.1;
+  line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-} */
+}
 
 /* Body styles*/
 body {
@@ -514,7 +514,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   row-gap: 72px;
-  column-gap: 0px;
 }
 
 /* Tablet styles & > */
@@ -524,15 +523,6 @@ img {
   }
 }
 
-/* Desktop styles & > */
-@media only screen and (min-width: 1158px) {
-  .features-list {
-    flex-wrap: nowrap;
-  }
-}
-/* .features-item {
-  border: none;
-} */
 /* Tablet styles & > */
 @media only screen and (min-width: 768px) {
   .features-item {
@@ -627,21 +617,51 @@ img {
 }
 
 /* Our team styles*/
+
 .section-team {
-  padding: 120px 0;
+  padding: 96px 0;
   background-color: var(--color-cloud);
 }
+
+@media only screen and (min-width: 1158px) {
+  .section-team {
+    padding: 120px 0;
+  }
+}
+
 .team-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  row-gap: 72px;
 }
+
+@media only screen and (min-width: 768px) {
+  .team-list {
+    row-gap: 64px;
+    column-gap: 24px;
+  }
+}
+
 .team-item {
-  width: calc((100%-72px) / 4);
+  /* Phone styles & > */
+  margin: 0 auto;
   background-color: var(--color-white);
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+/* Tablet styles & > */
+@media only screen and (min-width: 768px) {
+  .team-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .team-item {
+    width: calc((100% - 72px) / 4);
+  }
 }
 
 .team-card-content {
@@ -661,7 +681,7 @@ img {
   margin-top: 0;
   margin-bottom: 8px;
   color: var(--color-slate);
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
@@ -709,9 +729,15 @@ img {
 
 /* Customers */
 .section-customers {
-  padding: 120px 0;
+  /* Phone styles & > */
+  padding: 96px 0;
 }
-
+/* Desktop styles & > */
+@media only screen and (min-width: 1158px) {
+  .section-customers {
+    padding: 120px 0;
+  }
+}
 .customers-list {
   display: flex;
   align-items: center;
