@@ -23,9 +23,8 @@
 .container {
   /* Phone styles & > */
   outline: solid red;
-  min-width: 320px;
   max-width: 428px;
-  padding: 0 16px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 /* Tablet styles & > */
@@ -38,26 +37,26 @@
 @media only screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
-    padding: 0 15px;
-  }
-}
-/* Phone styles & > */
-@media only screen and (max-width: 767px) {
-  .section-team .container {
-    padding: 0 82px;
-  }
-}
-
-/* Tablet styles & > */
-@media only screen and (min-width: 768px) and (max-width: 1157px) {
-  .section-team .container,
-  .section-customers .container {
-    padding: 0 108px;
   }
 }
 
 .container .link {
   text-decoration: none;
+}
+
+/* Phone styles & > */
+.section {
+  padding: 96px 0 96px 0;
+}
+/* Desktop styles & > */
+@media only screen and (min-width: 1158px) {
+  .section {
+    padding: 120px 0 120px 0;
+  }
+}
+
+.section.section-work {
+  padding-top: 0;
 }
 
 .section-title {
@@ -206,20 +205,19 @@ img {
 .hero {
   /* Phone styles & > */
   max-width: 1440px;
+  padding: 112px 0;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero/people-office-1.jpg);
+    /* url(../images/hero/people-office-1.jpg); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 112px 0;
-  background-color: var(--color-navy-blue);
+    background-color: var(--color-navy-blue);
 }
-
 /* Desktop styles & > */
 @media only screen and (min-width: 1158px) {
   .hero {
@@ -511,39 +509,28 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+ 
+  /* Tablet styles & > */
+  @media only screen and (min-width: 768px) {
+    .features-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px ;
+    }
+  }
 
-.section-features {
-  /* Phone styles & > */
-  padding: 96px 0;
-}
-/* Desktop styles & > */
-@media only screen and (min-width: 1158px) {
-  .section-features {
-    padding: 120px 0;
+/* Phone styles & > */
+@media only screen and (max-width: 767px) {
+  .features-item:not(:last-child) {
+      margin-bottom: 72px; 
   }
 }
-
-.features-list {
-  /* Phone styles & > */
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 72px;
-}
-
 /* Tablet styles & > */
-@media only screen and (min-width: 768px) {
-  .features-list {
-    column-gap: 24px;
-  }
-}
-
-/* Tablet styles & > */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
   .features-item {
     width: calc((100% - 24px) / 2);
   }
 }
-
 /* Desktop styles & > */
 @media only screen and (min-width: 1158px) {
   .features-item {
@@ -575,14 +562,12 @@ img {
   font-weight: 700;
   color: var(--color-navy-blue);
   font-size: 36px;
-  text-align: center;
   line-height: 1.1;
   letter-spacing: 0.02em;
 }
-/* Tablet styles & > */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 767px) {
   .features-title {
-    text-align: left;
+    text-align: center;
   }
 }
 /* Desktop styles & > */
@@ -598,15 +583,13 @@ img {
   /* Phone styles & > */
   padding: 0;
   margin: 0;
-  font-size: 16px;
-  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
 /* Desktop styles & > */
-@media only screen and (min-width: 1158px) {
+@media only screen and (max-width: 1157px) {
   .features-text {
-    font-weight: 400;
+    font-weight: 500;
   }
 }
 
@@ -615,11 +598,6 @@ img {
   .section-work {
     display: none;
   }
-}
-
-/* Desktop styles & > */
-.section-work {
-  padding-bottom: 120px;
 }
 
 .work-list {
@@ -633,14 +611,7 @@ img {
 /* Our team styles*/
 
 .section-team {
-  padding: 96px 0;
-  background-color: var(--color-cloud);
-}
-
-@media only screen and (min-width: 1158px) {
-  .section-team {
-    padding: 120px 0;
-  }
+    background-color: var(--color-cloud);
 }
 
 .team-list {
@@ -742,16 +713,6 @@ img {
 
 /* Customers */
 
-.section-customers {
-  /* Phone styles & > */
-  padding: 96px 0;
-}
-/* Desktop styles & > */
-@media only screen and (min-width: 1158px) {
-  .section-customers {
-    padding: 120px 0;
-  }
-}
 .customers-list {
   /* Phone styles & > */
   display: flex;
