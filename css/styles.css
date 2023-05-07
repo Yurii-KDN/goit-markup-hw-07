@@ -535,7 +535,7 @@ img {
 /* Desktop styles & > */
 @media only screen and (min-width: 1158px) {
   .features-item {
-    width: calc((100% - 72px) / 4);
+    flex-basis: calc((100% - 72px) / 4);
   }
 }
 
@@ -606,7 +606,7 @@ img {
   gap: 24px;
 }
 .work-list-item {
-  width: calc((100%-48px) / 3);
+  flex-basis: calc((100%-48px) / 3);
 }
 
 /* Our team styles*/
@@ -657,13 +657,13 @@ margin: 0 auto;
 /* Tablet styles & > */
 @media only screen and (min-width: 768px) {
   .team-item {
-    width: calc((100% - 24px) / 2);
+    flex-basis: calc((100% - 24px) / 2);
   }
 }
 
 @media only screen and (min-width: 1158px) {
   .team-item {
-    width: calc((100% - 72px) / 4);
+    flex-basis: calc((100% - 72px) / 4);
   }
 }
 
