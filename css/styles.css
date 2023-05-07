@@ -177,6 +177,7 @@ img {
 }
 
 /* Contacts styles*/
+
 .contacts {
   margin-left: auto;
 }
@@ -739,7 +740,7 @@ margin: 0 auto;
   margin: 0 auto;
 }
 /* Tablet styles & > */
-@media only screen and (min-width: 768px) and (max-width: 1158px) {
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
   .customers-list {
     width: 552px;
   }
