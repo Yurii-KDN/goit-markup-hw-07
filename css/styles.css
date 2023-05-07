@@ -812,18 +812,32 @@ margin: 0 auto;
     padding: 100px 0;
   }
 }
-
+/* Tablet styles & > */
+@media only screen and (min-width: 768px) {
 .footer .container {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 72px;
-  justify-content: space-evenly;
+   }
 }
 
+@media only screen and (min-width: 768px) and (max-width:1157px) {
+  .footer .container {
+    max-width: 552px;
+    gap: 72px 24px;
+  }
+}
+/* Desktop styles */
 @media only screen and (min-width: 1158px) {
   .footer .container {
     justify-content: flex-start;
   }
+}
+/* Phone styles & > */
+@media only screen and (max-width: 767px) {
+.footer-text-content {
+  width: 268px;
+  margin: 0 auto 72px auto;
+ }
 }
 
 /* Desktop styles & > */
@@ -834,10 +848,16 @@ margin: 0 auto;
 }
 
 .footer .logo {
-  display: block;
-  text-align: center;
   margin-bottom: 16px;
 }
+/* Phone styles & > */
+@media only screen and (max-width: 767px) {
+.footer .logo {
+  display: block;
+  text-align: center;
+ }
+}  
+
 .footer-text {
   max-width: 264px;
   margin-top: 0;
@@ -859,8 +879,12 @@ margin: 0 auto;
   color: var(--color-white);
 }
 
+/* Phone styles & > */
+@media only screen and (max-width: 767px) {
 .footer-social-content {
   text-align: center;
+  margin-bottom: 72px;
+ }
 }
 /* Desktop styles & > */
 @media only screen and (min-width: 1158px) {
@@ -885,9 +909,19 @@ margin: 0 auto;
 
 /* Footer subscribe */
 
+/* Phone styles & > */
+@media only screen and (max-width: 767px) {
+.footer-subscribe-container {
+  text-align: center;
+}
+}
+
+/* Tablet styles & > */
+@media only screen and (min-width: 768px) {
 .subscribe-form-wrapper {
   display: flex;
   gap: 24px;
+}
 }
 
 .subscribe-form-input {
@@ -907,6 +941,14 @@ margin: 0 auto;
   outline: none;
 
   transition: var(--anim-transition);
+}
+
+/* Phone styles & > */
+@media only screen and (max-width: 767px) {
+  .subscribe-form-input {
+    width: 100%;
+    margin-bottom: 16px;  
+  }
 }
 
 .subscribe-form-input::placeholder {
@@ -937,7 +979,12 @@ margin: 0 auto;
 
   transition: background-color var(--anim-transition);
 }
-
+/* Phone styles & > */
+@media only screen and (max-width: 767px) {
+  .subscribe-button {
+    margin: 0 auto;
+  }
+}
 .subscribe-button:hover,
 .subscribe-button:focus {
   background-color: var(--color-ocean);
