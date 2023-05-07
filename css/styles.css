@@ -615,27 +615,44 @@ img {
 }
 
 .team-list {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 72px;
+margin: 0 auto;
+}
+/* Phone styles & > */
+@media only screen and (max-width: 767px) {
+.team-list {
+  width: 264px;
+   }
+}
+/* Tablet styles & > */
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .team-list {
+    width: 552px;
+  }
 }
 
 /* Tablet styles & > */
 @media only screen and (min-width: 768px) {
   .team-list {
+    display: flex;
+    flex-wrap: wrap;
     row-gap: 64px;
     column-gap: 24px;
   }
 }
 
 .team-item {
-  /* Phone styles & > */
   background-color: var(--color-white);
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
+  /* Phone styles & > */
+  @media only screen and (max-width: 767px) {
+    .team-item:not(:last-child) {
+      margin-bottom: 72px;
+    }
+  }
 /* Tablet styles & > */
 @media only screen and (min-width: 768px) {
   .team-item {
