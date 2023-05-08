@@ -41,8 +41,9 @@
   }
 }
 
-.container .link {
+.link {
   text-decoration: none;
+  color: currentColor;
 }
 
 /* Phone styles & > */
@@ -213,16 +214,55 @@ img {
 .contacts .contacts-list-item {
   font-style: normal;
 }
-.contact-link {
-  color: var(--color-slate);
-  line-height: 1.5;
-  letter-spacing: 0.02em;
 
-  transition: color var(--anim-transition);
+.contact-email-link,
+.contact-tel-link {
+color: var(--color-slate);
+line-height: 1.5;
+letter-spacing: 0.02em;
+
+transition: color var(--anim-transition);
 }
 
-.contact-link:hover,
-.contact-link:focus {
+/* Phone styles */
+@media only screen and (max-width: 767px) {
+ .contact-email-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+ .contact-tel-link {
+  font-weight:700;
+  font-size:36px;
+  line-height: 1.11;
+  color: var(--color-iris);
+  }
+}
+
+@media only screen and (max-width: 427px) {
+  .contact-tel-link {
+    font-size: 24px;
+    }
+}
+
+
+/* Tablet styles  */
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .contact-email-link,
+  .contact-tel-link {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  }
+}
+
+.contact-email-link:hover,
+.contact-email-link:focus,
+.contact-tel-link:hover,
+.contact-tel-link:focus  {
   color: var(--color-ocean);
 }
 
@@ -934,7 +974,10 @@ margin: 0 auto;
 
 .footer .social-link:hover,
 .footer .social-link:focus,
-.footer .social-link:active {
+.footer .social-link:active,
+.mobile-social-list .social-link:hover,
+.mobile-social-list .social-link:focus,
+.mobile-social-list .social-link:active {
   background-color: var(--color-green);
 }
 
@@ -1145,12 +1188,27 @@ margin: 0 auto;
 }
 /* Mobile menu styles */
 
+.menu-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 428px;
+  height: 100%;
+  margin: 0 auto;
+}
+
 .menu-close-icon {
   fill: currentColor;
 }
-/* .mobile-social-list {
+.mobile-social-list {
   gap: 56px;
-} */
+}
+
+@media only screen and (max-width: 427px) {
+.mobile-social-list {
+  gap: 30px;
+}
+}
 
 .menu-toggle {
   min-height: 40px;
@@ -1205,15 +1263,6 @@ margin: 0 auto;
   background-color: transparent;
 }
 
-.mobile-menu {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.mobile-menu .link {
-}
-
 .mobile-nav-link {
   display: block;
   max-width: 175px;
@@ -1236,3 +1285,10 @@ text-decoration: none;
   color: var(--color-ocean);
 }
 
+.mobile-contacts-list {
+  margin-bottom: 48px;
+}
+
+.mobile-contscts-item:not(:last-child) {
+margin-bottom: 40px;
+}
