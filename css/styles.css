@@ -28,7 +28,6 @@ body {
 }
 
 .container {
-  outline: solid red;
   max-width: 428px;
   padding: 0 16px;
   margin: 0 auto;
